@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Language {
+  id        Int    @id @default(autoincrement())
+  name      String
+  nativeName String
+  detail     LanguageDetail?   // Define the relationship
+  country  Country  @relation(fields: [countryId], references: [id])
+  countryId Int
+}
+
+// Define the model for Currency
+model Currency {
+  id     Int  @id @default(autoincrement())
+  code   String
+  name   String
+  symbol String
+  country  Country  @relation(fields: [countryId], references: [id])
+  countryId Int
+}
+
+model Country {
+  id               Int      @id @default(autoincrement())
+  name             String
+  alpha2Code       String
+  alpha3Code       String
+  capital          String
+  population       Int
+  region           String
+  subregion        String
+  area             Int?
+  gdp              Float?
+  flag             String
+  topLevelDomain   String[]
+  callingCodes     String[]
+  timezones        String[]
+  borders          String[]
+  languages        Language[]  
+  currencies       Currency[]
+  government       Government?
+}
+
+model LanguageDetail {
+  id        Int  @id @default(autoincrement())
+  name      String
+  nativeName String
+  iso639_1  String
+  iso639_2  String
+  language  Language  @relation(fields: [languageId], references: [id])
+  languageId Int @unique
+}
+
+// Define the model for Government
+model Government {
+  id             Int  @id @default(autoincrement())
+  system         String
+  headOfState    String
+  rulingParty    String
+  electionSystem String
+  electionCycle  Int
+  country  Country  @relation(fields: [countryId], references: [id])
+  countryId Int @unique
+}
+
