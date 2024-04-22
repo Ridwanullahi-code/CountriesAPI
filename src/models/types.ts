@@ -13,6 +13,16 @@ interface Country {
     currencies: string;
     government: string;
     gdp: string;
+    language: string;
+    officialLanguage: string;
+    climate: string;
+    terrain: string;
+    populationDensity: number;
+    governmentType: string;
+    officialCurrency: string;
+    nationalAnimal: string;
+    nationalSport: string;
+
   
   }
   

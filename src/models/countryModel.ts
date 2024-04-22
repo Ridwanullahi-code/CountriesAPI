@@ -19,6 +19,15 @@ async function createCountry(data: Country) {
           currencies: data.currencies,
           government: data.government,
           gdp: data.gdp,
+          language: data.language,
+          officialCurrency: data.officialCurrency,
+          climate: data.climate,
+          terrain: data.terrain,
+          populationDensity: data.populationDensity,
+          governmentType: data.governmentType,
+          nationalAnimal: data.nationalAnimal,
+          nationalSport: data.nationalSport,
+          
       },
     });
     return createdCountry;

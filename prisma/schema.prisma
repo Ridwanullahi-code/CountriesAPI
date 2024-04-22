@@ -29,13 +29,13 @@ model Country {
   currencies       String 
   government       String 
   gdp              String
-  language         String?  
-  officialLanguage String?  
-  climate          String? 
-  terrain          String? 
-  populationDensity Float? 
-  governmentType   String? 
-  officialCurrency String?
-  nationalAnimal   String?
-  nationalSport    String?
+  language         String 
+  officialLanguage String  
+  climate          String 
+  terrain          String 
+  populationDensity Float 
+  governmentType   String 
+  officialCurrency String
+  nationalAnimal   String
+  nationalSport    String
 }
