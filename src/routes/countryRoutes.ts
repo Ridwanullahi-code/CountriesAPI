@@ -4,11 +4,11 @@ import countryController from '../controllers/countryController';
 const router = express.Router();
 
 // Define the countries endpoint
+router.post('/countries', countryController.createCountry);
 router.get('/countries', countryController.getAllCountries);
 router.get('/countries/:countryCode', countryController.getCountryByCode);
-router.get('/countries/:countryName', countryController.getCountryByName);
-router.get('/countries/:countryCode/currency', countryController.getCurrencyByCountryCode)
-router.get('/countries/:countryCode/government', countryController.getGovernmentByCountryCode)
-router.get('/countries/:countryCode/gdp', countryController.getGDPByCountryCode)
+router.put('/countries/:code', countryController.updateCountry);
+router.delete('/countries', countryController.deleteAllCountries);
+router.delete('/countries/:countryCode', countryController.deleteCountryByCode)
 
 export default router;  

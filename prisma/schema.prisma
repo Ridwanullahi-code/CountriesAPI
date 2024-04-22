@@ -13,7 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Define the model for Country
 model Country {
   id               Int      @id @default(autoincrement())
   name             String   @unique
@@ -25,64 +24,18 @@ model Country {
   subregion        String
   area             Int?
   flag             String
-  callingCodes     String[]
-  timezones        String[]
-  borders          String[]
-  currencies       Currency[]
-  government       Government?
-  gdp             GDP?
-}
-
-// Define the model for Currency
-model Currency {
-  id              Int      @id @default(autoincrement())
-  code            String
-  name            String
-  symbol          String
-  exchangeRate    Float    @default(1.0)
-  isCrypto        Boolean  @default(false) 
-  centralBank     String? 
-  isFiat          Boolean  @default(true) 
-  notes           String? 
-  country         Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
-  countryId       Int      @unique
-}
-
-// Define the model for Government
-model Government {
-  id                     Int      @id @default(autoincrement())
-  system                 String   @unique
-  headOfState            String
-  rulingParty            String
-  electionSystem         String
-  electionCycle          Int
-  highestCourt           String   @default("Supreme Court")
-  judicialIndependence   Boolean  @default(false)
-  freedomOfExpression   Boolean  @default(false)
-  equalityBeforeLaw     Boolean  @default(false)
-  country                Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
-  countryId              Int      @unique
-}
-
-// Define the model for GDP
-model GDP {
-  id                  Int      @id @default(autoincrement())
-  total               Float
-  perCapita           Float
-  growthRate          Float
-  currency            String
-  agriculture         Float
-  industry            Float
-  services            Float
-  exports             Json
-  imports             Json
-  externalDebt        Float
-  governmentSpending  Json
-  grossInvestment     Float
-  fixedInvestment     Float
-  inventoryInvestment Float
-  unemploymentRate    Float
-  inflationRate       Float
-  country        Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
-  countryId           Int      @unique
+  timezones        String 
+  borders          String 
+  currencies       String 
+  government       String 
+  gdp              String
+  language         String?  
+  officialLanguage String?  
+  climate          String? 
+  terrain          String? 
+  populationDensity Float? 
+  governmentType   String? 
+  officialCurrency String?
+  nationalAnimal   String?
+  nationalSport    String?
 }
