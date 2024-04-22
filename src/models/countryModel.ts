@@ -20,6 +20,7 @@ async function createCountry(data: Country) {
           government: data.government,
           gdp: data.gdp,
           language: data.language,
+          officialLanguage: data.officialLanguage,
           officialCurrency: data.officialCurrency,
           climate: data.climate,
           terrain: data.terrain,
