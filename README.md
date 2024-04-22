@@ -1,10 +1,8 @@
-
-
 <a name="readme-top"></a>
 
 <div align="center">
 
-  ![CountriesAPI Logo](./best-countries-to-live-in.webp)
+  ![CountriesAPI Logo](./countries.webp)
 
 </div>
 
