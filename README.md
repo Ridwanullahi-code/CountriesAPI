@@ -47,11 +47,19 @@ CountriesAPI is a robust and user-friendly API designed to provide comprehensive
   </ul>
 </details>
 
-<!-- LIVE DEMO -->
+## Base URL
 
+The base URL for the CountriesAPI is:
+
+https://countriesapi-production-3385.up.railway.app
+
+
+This base URL can be used to access the API endpoints. For detailed information on available endpoints and how to use them, please refer to the [API documentation](https://app.swaggerhub.com/apis-docs/RIDWANULLAHIAJAYI01/country-api/1.0.0).
+
+<!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Explore the live demo of CountriesAPI to see it in action! [Live Demo Link](https://yourdeployedapplicationlink.com)
+- Explore the demo of CountriesAPI to see it in action! [Live Demo Link](https://app.swaggerhub.com/apis-docs/RIDWANULLAHIAJAYI01/country-api/1.0.0)
 
 ## Key Features <a name="key-features"></a>
 
@@ -73,8 +81,11 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-- Node.js installed
-- MongoDB installed (optional, if using a database)
+To get started with the Country API, make sure you have the following prerequisites installed:
+
+- **Node.js**: Ensure that you have Node.js installed on your system. You can download it from the [official Node.js website](https://nodejs.org/).
+
+- **PostgreSQL** (Optional): If you plan to use a database with the API, PostgreSQL is recommended. You can download it from the [official PostgreSQL website](https://www.postgresql.org/download/).
 
 ### Setup
 
@@ -83,12 +94,23 @@ Clone this repository to your desired folder:
 ```sh
 git clone https://github.com/Ridwanullahi-code/CountriesAPI.git
 ```
+
+### Change Directory
+
+```
 cd CountriesAPI
+```
 
 ### Install
 
 ```sh
  npm install
+```
+
+### Database Migration
+
+```
+npm run migrate:init
 ```
 
 ### Usage
@@ -109,15 +131,9 @@ npm test
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Ridwanullahi-code)
+- Twitter: [@twitterhandle](https://twitter.com/Ridwanullahi22)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ajayi-ridwan/)
 
 <!-- FUTURE FEATURES -->
 

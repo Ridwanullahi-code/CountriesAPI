@@ -4,8 +4,9 @@
   "description": "<a name=\"readme-top\"></a>",
   "main": "index.js",
   "scripts": {
+    "migrate:init": "npx prisma migrate dev --name init",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx prisma migrate dev --name init && nodemon"
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
