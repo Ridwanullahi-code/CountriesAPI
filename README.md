@@ -53,8 +53,14 @@ The base URL for the CountriesAPI is:
 
 https://countriesapi-production-3385.up.railway.app
 
+### Retrieve All Countries
+To retrieve all countries, send a GET request to the following endpoint:
 
-This base URL can be used to access the API endpoints. For detailed information on available endpoints and how to use them, please refer to the [API documentation](https://app.swaggerhub.com/apis-docs/RIDWANULLAHIAJAYI01/country-api/1.0.0).
+```sh
+https://countriesapi-production-3385.up.railway.app/countries
+```
+
+For detailed information on available endpoints and how to use them, please refer to the [API documentation](https://app.swaggerhub.com/apis-docs/RIDWANULLAHIAJAYI01/country-api/1.0.0)
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -97,7 +103,7 @@ git clone https://github.com/Ridwanullahi-code/CountriesAPI.git
 
 ### Change Directory
 
-```
+```sh
 cd CountriesAPI
 ```
 
@@ -109,7 +115,7 @@ cd CountriesAPI
 
 ### Database Migration
 
-```
+```sh
 npm run migrate:init
 ```
 
